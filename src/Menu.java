@@ -8,7 +8,7 @@ public class Menu {
 
             System.out.println("1. Show car options");
             System.out.println("2. Show customer options");
-            System.out.println("4. Show what's currently rented");
+            System.out.println("3. Show what's currently rented");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // consume newline

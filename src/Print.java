@@ -17,7 +17,9 @@ public class Print {
             System.out.println("Ccm:                 " + car.getCcm());
             System.out.println("Size of trunk:       " + car.getTrunkLiters());
             System.out.println("--------------------------------------------");
+
         }
+        Menu.returnToMenu();
     }
 
     public static void printCustomers() {

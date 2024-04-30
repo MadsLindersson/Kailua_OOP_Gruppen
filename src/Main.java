@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,13 +11,13 @@ public class Main {
     public static ArrayList<Rental> rentals = new ArrayList<>();
 
     public static void main(String[] args) {
-        loadData();
+        saveAndLoadData();
         AsciiArt.Ascii();
         Menu.showMenu();
 
     }
 
-    private static void loadData() {
+    public static void saveAndLoadData() {
         SaveAndLoad.loadCars();
         SaveAndLoad.loadCustomers();
         SaveAndLoad.loadRentals();
@@ -32,9 +31,9 @@ public class Main {
         // Add the rental to the list of rentals
         rentals.add(rental);
         // Save the changes to the rentals file
-        SaveAndLoad.saveRentals();
-        // Save the changes to the cars file
-        SaveAndLoad.saveCars();
+        Main.saveAndLoadData();
+
+        Menu.returnToMenu();
     }
 
     public static void returnCar(Customer customer, Car car) {
@@ -50,7 +49,8 @@ public class Main {
         if (rentalToRemove != null) {
             rentals.remove(rentalToRemove);
             // Save the changes to the rentals file
-            SaveAndLoad.saveRentals();
+            Main.saveAndLoadData();
+            Menu.returnToMenu();
         }
     }
 
@@ -110,6 +110,8 @@ public class Main {
         // Rent the car
         rentCar(customer, selectedCar, fromDateAndTime, toDateAndTime, maxKm);
         System.out.println("Car rented successfully.");
+        Main.saveAndLoadData();
+        Menu.returnToMenu();
     }
     public static void returnCarFromMenu() {
         Scanner scanner = new Scanner(System.in);
@@ -136,8 +138,9 @@ public class Main {
         // Remove the rental from the list of rentals
         rentals.remove(rentalToRemove);
         // Save the changes to the rentals file
-        SaveAndLoad.saveRentals();
+        Main.saveAndLoadData();
         System.out.println("Car returned successfully.");
+        Menu.returnToMenu();
     }
 
 

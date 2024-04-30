@@ -8,7 +8,6 @@ public class SaveAndLoad {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
-                // Extract information from parts and create Car objects
                 Main.cars.add(new Car(
                         parts[0].trim(), // brand
                         parts[1].trim(), // model

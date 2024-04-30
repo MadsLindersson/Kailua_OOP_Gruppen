@@ -1,1 +1,4 @@
-Jakob,   Skovvej 25,   3400,   Hillerod,   23886723,   23886723,   jkjaerulff@gmail.com
+Jakob,   Skovvej 25,   3400,   Hillerod,   23886723, jkjaerulff@gmail.com
+Jensen, Hovedgade 12, 2200, København, 45876543, jensen@email.dk
+Nielsen, Strandvejen 5, 5000, Odense, 35467890, nielsen@email.dk
+Andersen, Skovvej 8, 8000, Aarhus, 23789012, andersen@email.dk

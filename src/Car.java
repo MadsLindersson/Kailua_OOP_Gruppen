@@ -110,7 +110,6 @@ class Car {
 
     public void setOdometer(int odometer) {
         this.odometer = odometer;
-
     }
 
     public void setGear(boolean gear) {
@@ -145,6 +144,12 @@ class Car {
         this.trunkLiters = trunkLiters;
     }
 
+    @Override
+    public String toString() {
+        return brand + ", " + model + ", " + fuelType + ", " + registrationNumber + ", " + firstRegistrationYearAndMonth + ", " +
+                odometer + ", " + gear + ", " + seats + ", " + aircon + ", " + cruiseControl + ", " + horsePower + ", " +
+                spoiler + ", " + ccm + ", " + trunkLiters;
+    }
 
     public static void createCar() {
         Scanner scan = new Scanner(System.in);
@@ -221,7 +226,7 @@ class Car {
         Main.cars.add(newCar);
 
         // Save the changes to the cars file
-        SaveAndLoad.saveCars();
+        Main.saveAndLoadData();
 
         System.out.println("New car created successfully.");
 

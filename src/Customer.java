@@ -98,9 +98,10 @@ class Customer {
         Main.customers.add(newCustomer);
 
         // Save the changes to the customers file
-        SaveAndLoad.saveCustomers();
+        Main.saveAndLoadData();
 
         System.out.println("New customer created successfully.");
+        Menu.returnToMenu();
     }
 
     public static void removeCustomer() {
@@ -127,8 +128,9 @@ class Customer {
         Main.customers.remove(customerToRemove);
 
         // Save the changes to the customers file
-        SaveAndLoad.saveCustomers();
+        Main.saveAndLoadData();
 
         System.out.println("Customer removed successfully.");
+        Menu.returnToMenu();
     }
 }
