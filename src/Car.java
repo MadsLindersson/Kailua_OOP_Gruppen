@@ -49,17 +49,40 @@ class Car {
 
     public int getOdometer() { return odometer; }
 
-    public boolean isGear() { return gear; }
-
+    public String getGear() {
+        if (gear) {
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
     public int getSeats() { return seats; }
 
-    public boolean isAircon() { return aircon; }
+    public String getAircon() {
+        if (aircon) {
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
 
-    public boolean isCruiseControl() { return cruiseControl; }
+    public String getCruiseControl() {
+        if (cruiseControl) {
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
 
     public int getHorsePower() { return horsePower; }
 
-    public boolean isSpoiler() { return spoiler; }
+    public String getSpoiler() {
+        if (spoiler) {
+            return "Yes";
+        } else {
+            return "No";
+        }
+    }
 
     public int getCcm() { return ccm; }
 
