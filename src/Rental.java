@@ -4,9 +4,9 @@ class Rental {
     protected String toDateAndTime;
     protected int maxKm;
     protected int currentKm;
-    protected String registrationNumber;
+    protected int registrationNumber;
 
-    public Rental(String rentersID, String fromDateAndTime, String toDateAndTime, int maxKm, int currentKm, String registrationNumber) {
+    public Rental(String rentersID, String fromDateAndTime, String toDateAndTime, int maxKm, int currentKm, int registrationNumber) {
         this.rentersID = rentersID;
         this.fromDateAndTime = fromDateAndTime;
         this.toDateAndTime = toDateAndTime;
@@ -57,12 +57,13 @@ class Rental {
         this.currentKm = currentKm;
     }
 
-    public String getRegistrationNumber() {
+    public int getRegistrationNumber() {
         return registrationNumber;
     }
 
-    public void setRegistrationNumber(String registrationNumber) {
+    public int setRegistrationNumber(int registrationNumber) {
         this.registrationNumber = registrationNumber;
+        return registrationNumber;
     }
 
     @Override

@@ -50,7 +50,13 @@ public class SaveAndLoad {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 // Extract information from parts and create Rental objects
-                Main.rentals.add(new Rental(parts[0], parts[1], parts[2], Integer.parseInt(parts[3].trim()), Integer.parseInt(parts[4].trim()), parts[5]));
+                Main.rentals.add(new Rental(
+                          parts[0] // rentersId
+                        , parts[1] // fromDateAndTime
+                        , parts[2] // toDateAndTime
+                        , Integer.parseInt(parts[3].trim()) //maxKm
+                        , Integer.parseInt(parts[4].trim()) // CurrentKm
+                        , Integer.parseInt(parts[5].trim()))); //registrationNumber
             }
         } catch (IOException e) {
             e.printStackTrace();

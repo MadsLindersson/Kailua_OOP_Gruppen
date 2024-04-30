@@ -26,9 +26,9 @@ public class Main {
 
     public static void rentCar(Customer customer, Car car, String fromDateAndTime, String toDateAndTime, int maxKm) {
         // Create a new Rental object
-        Rental rental = new Rental(customer.getName(), fromDateAndTime, toDateAndTime, maxKm, car.getKilometersDriven(), car.getRegistrationNumber());
+        Rental rental = new Rental(customer.getName(), fromDateAndTime, toDateAndTime, maxKm, car.getOdometer(), car.getRegistrationNumber());
         // Update the kilometers driven by the car
-        car.setKilometersDriven(car.getKilometersDriven() + maxKm);
+        car.setOdometer(car.getOdometer() + maxKm);
         // Add the rental to the list of rentals
         rentals.add(rental);
         // Save the changes to the rentals file
@@ -41,7 +41,7 @@ public class Main {
         // Find the rental associated with the customer and car
         Rental rentalToRemove = null;
         for (Rental rental : rentals) {
-            if (rental.getRentersID().equals(customer.getName()) && rental.getRegistrationNumber().equals(car.getRegistrationNumber())) {
+            if (rental.getRentersID().equals(customer.getName()) && rental.getRegistrationNumber() == (car.getRegistrationNumber())) {
                 rentalToRemove = rental;
                 break;
             }
@@ -78,17 +78,17 @@ public class Main {
         // Display available cars
         System.out.println("Available cars:");
         for (Car car : cars) {
-            System.out.println(car.getBrandAndModel() + " - " + car.getRegistrationNumber());
+            System.out.println(car.getBrand() + " " + car.getModel() + " - " + car.getRegistrationNumber());
         }
 
         // Get car details from user
         System.out.print("Enter registration number of the car you want to rent: ");
-        String regNumber = scanner.nextLine();
+        int regNumber = scanner.nextInt();
 
         // Find the car
         Car selectedCar = null;
         for (Car car : cars) {
-            if (car.getRegistrationNumber().trim().equalsIgnoreCase(regNumber.trim())) {
+            if (car.getRegistrationNumber() == regNumber) {
                 selectedCar = car;
                 break;
             }
@@ -114,12 +114,12 @@ public class Main {
     public static void returnCarFromMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter registration number of the car you want to return: ");
-        String regNumber = scanner.nextLine();
+        int regNumber = scanner.nextInt();
 
         // Find the rental associated with the car
         Rental rentalToRemove = null;
         for (Rental rental : rentals) {
-            if (rental.getRegistrationNumber().trim().equalsIgnoreCase(regNumber.trim())) {
+            if (rental.getRegistrationNumber() == regNumber) {
                 rentalToRemove = rental;
                 break;
             }

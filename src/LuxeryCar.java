@@ -1,4 +1,4 @@
-class LuxuryCar extends Car {
+ /*class LuxuryCar extends Car {
      int engineCapacity;
      boolean automaticGear;
      boolean airCondition;
@@ -17,4 +17,4 @@ class LuxuryCar extends Car {
     public String toString() {
         return super.toString() + ", " + engineCapacity + ", " + automaticGear + ", " + airCondition + ", " + cruiseControl + ", " + leatherSeats;
     }
-}
+} */

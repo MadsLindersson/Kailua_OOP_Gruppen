@@ -1,4 +1,4 @@
-Honda Civic, Benzin, 0, 15-12-1999, 657268
-Honda Civic, Benzin, 0, 15-12-1999, 657268
-Honda Civic, Benzin, 0, 15-12-1999, 657268
-Honda Civic, Benzin, 0, 15-12-1999, 657268,
+Honda, Civic, Benzin, 0, 15121999, 657268
+Honda Civic, Benzin, 0, 15121999, 657268
+Honda Civic, Benzin, 0, 15121999, 657268
+Honda Civic, Benzin, 0, 15121999, 657268,

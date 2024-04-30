@@ -110,6 +110,7 @@ class Car {
 
     public void setOdometer(int odometer) {
         this.odometer = odometer;
+
     }
 
     public void setGear(boolean gear) {
