@@ -1,21 +1,19 @@
 import java.util.Scanner;
 
 class Customer {
-    protected String name;
-    protected String address;
-    protected String postNumber;
-    protected String city;
-    protected String mobilePhone;
-    protected String phone;
-    protected String email;
+    private String name;
+    private String address;
+    private String postNumber;
+    private String city;
+    private String mobilePhone;
+    private String email;
 
-    public Customer(String name, String address, String postNumber, String city, String mobilePhone, String phone, String email) {
+    public Customer(String name, String address, String postNumber, String city, String mobilePhone, String email) {
         this.name = name;
         this.address = address;
         this.postNumber = postNumber;
         this.city = city;
         this.mobilePhone = mobilePhone;
-        this.phone = phone;
         this.email = email;
     }
 
@@ -62,14 +60,6 @@ class Customer {
         this.mobilePhone = mobilePhone;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -102,7 +92,7 @@ class Customer {
         String email = scanner.nextLine();
 
         // Create a new customer object
-        Customer newCustomer = new Customer(name, address, postNumber, city, mobilePhone, phone, email);
+        Customer newCustomer = new Customer(name, address, postNumber, city, mobilePhone, email);
 
         // Add the new customer to the list of customers
         Main.customers.add(newCustomer);
