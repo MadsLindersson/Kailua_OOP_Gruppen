@@ -8,7 +8,7 @@ public class Print {
             System.out.println("Registration Date: " + car.getFirstRegistrationDate());
             System.out.println("Kilometers Driven: " + car.getKilometersDriven());
             System.out.println("--------------------------------------------");
-            System.out.println(); // Add an empty line for separation
+            System.out.println();
         }
     }
 

@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
 class Car {
-    private String brand;
-    private String model;
-    private String fuelType;
-    private int registrationNumber;
-    private String firstRegistrationYearAndMonth;
-    private int odometer;
-    private boolean gear;
-    private int seats;
-    private boolean aircon;
-    private boolean cruiseControl;
-    private int horsePower;
-    private boolean spoiler;
-    private int ccm;
-    private int trunkLiters;
+    private String brand; //1
+    private String model; //2
+    private String fuelType; //3
+    private int registrationNumber; //4
+    private String firstRegistrationYearAndMonth; //5
+    private int odometer; //6
+    private boolean gear; //7
+    private int seats; //8
+    private boolean aircon; //9
+    private boolean cruiseControl; //10
+    private int horsePower; //11
+    private boolean spoiler; //12
+    private int ccm; //13
+    private int trunkLiters; //14
 
     public Car (String brand, String model, String fuelType, int registrationNumber,
                     String firstRegistrationYearAndMonth, int odometer, boolean gear, int seats,
