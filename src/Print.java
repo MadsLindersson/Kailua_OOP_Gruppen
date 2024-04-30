@@ -22,17 +22,9 @@ public class Print {
         Menu.returnToMenu();
     }
 
-    public static void printCustomers() {
+    public static void printPrivateCustomers() { //instance of
         System.out.println("Customer list:");
-        for (Customer customer : Main.customers) {
-            System.out.println("Name: " + customer.getName());
-            System.out.println("Address: " + customer.getAddress());
-            System.out.println("Post number: " + customer.getPostNumber());
-            System.out.println("Mobile phone: " + customer.getMobilePhone());
-            System.out.println("Email: " + customer.getEmail());
-            System.out.println("--------------------------------------------");
-            System.out.println();
-        }
+       // ((PrivateCustomerSub).Customer).returnString();
     }
 
     public static void printRentals() {
