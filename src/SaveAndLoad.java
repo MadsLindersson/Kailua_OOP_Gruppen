@@ -10,11 +10,11 @@ public class SaveAndLoad {
                 String[] parts = line.split(",");
                 // Extract information from parts and create Car objects
                 Main.cars.add(new Car(
-                        parts[0], // brand
-                        parts[1], // model
-                        parts[2], // fuelType
+                        parts[0].trim(), // brand
+                        parts[1].trim(), // model
+                        parts[2].trim(), // fuelType
                         Integer.parseInt(parts[3].trim()), // registrationNumber
-                        parts[4], // firstRegistrationYearAndMonth
+                        parts[4].trim(), // firstRegistrationYearAndMonth
                         Integer.parseInt(parts[5].trim()), // odometer
                         Boolean.parseBoolean(parts[6].trim()), // gear
                         Integer.parseInt(parts[7].trim()), // seats
@@ -37,7 +37,7 @@ public class SaveAndLoad {
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 // Extract information from parts and create Customer objects
-                Main.customers.add(new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5], parts[6]));
+                Main.customers.add(new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]));
             }
         } catch (IOException e) {
             e.printStackTrace();

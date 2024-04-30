@@ -1,4 +1,3 @@
-Honda, Civic, Benzin, 0, 15121999, 657268
-Honda Civic, Benzin, 0, 15121999, 657268
-Honda Civic, Benzin, 0, 15121999, 657268
-Honda Civic, Benzin, 0, 15121999, 657268,
+Honda, Civic, Benzin, 0, 15121999, 657268, true, 5, true, false, 250, false, 450, 200
+Honda, Civic, Benzin, 0, 15121999, 657268, true, 5, true, false, 250, false, 450, 200
+Honda, Civic, Benzin, 0, 15121999, 657268, true, 5, true, false, 250, false, 450, 200

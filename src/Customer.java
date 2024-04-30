@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
 class Customer {
-    private String name;
-    private String address;
-    private String postNumber;
-    private String city;
-    private String mobilePhone;
-    private String email;
+    private String name; //1
+    private String address; //2
+    private String postNumber; //3
+    private String city; //4
+    private String mobilePhone; //5
+    private String email; //6
 
     public Customer(String name, String address, String postNumber, String city, String mobilePhone, String email) {
         this.name = name;
@@ -70,7 +70,7 @@ class Customer {
 
     @Override
     public String toString() {
-        return name + ", " + address + ", " + postNumber + ", " + city + ", " + mobilePhone + ", " + phone + ", " + email;
+        return name + ", " + address + ", " + postNumber + ", " + city + ", " + mobilePhone  + ", " + email;
     }
 
     public static void createCustomer() {
