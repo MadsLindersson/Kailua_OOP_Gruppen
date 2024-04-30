@@ -2,11 +2,20 @@ public class Print {
     public static void printCars() {
         System.out.println("Cars:");
         for (Car car : Main.cars) {
-            System.out.println("Brand and Model: " + car.getBrandAndModel());
+            System.out.println("Brand:               " + car.getBrand());
+            System.out.println("Model:               " + car.getModel());
+            System.out.println("Fuel type:           " + car.getFuelType());
             System.out.println("Registration Number: " + car.getRegistrationNumber());
-            System.out.println("Fuel Type: " + car.getFuelType());
-            System.out.println("Registration Date: " + car.getFirstRegistrationDate());
-            System.out.println("Kilometers Driven: " + car.getKilometersDriven());
+            System.out.println("Registration Date:   " + car.getFirstRegistrationYearAndMonth());
+            System.out.println("Kilometers Driven:   " + car.getOdometer());
+            System.out.println("Gear type:           " + car.getGear());
+            System.out.println("Number of seats:     " + car.getSeats());
+            System.out.println("Aircon:              " + car.getAircon());
+            System.out.println("Cruise control:      " + car.getCruiseControl());
+            System.out.println("Horsepower:          " + car.getHorsePower());
+            System.out.println("Spoiler:             " + car.getSpoiler());
+            System.out.println("Ccm:                 " + car.getCcm());
+            System.out.println("Size of trunk:       " + car.getTrunkLiters());
             System.out.println("--------------------------------------------");
             System.out.println();
         }
