@@ -15,9 +15,7 @@ public class Main {
         saveAndLoadData();
         AsciiArt.Ascii();
         Menu.showMenu();
-
     }
-
     public static void saveAndLoadData() {
         SaveAndLoad.loadCars();
         SaveAndLoad.loadCustomers();

@@ -18,6 +18,7 @@ public class Menu {
                     System.out.println("2. Return a car");
                     System.out.println("3. Show all cars");
                     System.out.println("4. Create a car");
+                    System.out.println("5. Remove a car");
                     int innerChoice = scanner.nextInt();
                     if (innerChoice == 1) {
                         RentCar.rentCarFromMenu();
@@ -25,8 +26,11 @@ public class Menu {
                         ReturnCar.returnCarFromMenu();
                     } else if (innerChoice == 3) {
                         Print.printCars();
-                    } else if (innerChoice == 4){
-                        Car.createCar();
+                    } else if (innerChoice == 4) {
+                        CreateCar.createCar();
+                    } else if (innerChoice == 5){
+                        RemoveCar.removeCar();
+                    } else {
                         returnToMenu();
                     }
                     break;
