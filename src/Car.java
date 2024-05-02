@@ -226,7 +226,8 @@ class Car {
         Main.cars.add(newCar);
 
         // Save the changes to the cars file
-        Main.saveAndLoadData();
+        SaveAndLoad.saveCars();
+        SaveAndLoad.loadCustomers();
 
         System.out.println("New car created successfully.");
 

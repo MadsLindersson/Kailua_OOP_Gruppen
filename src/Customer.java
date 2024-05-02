@@ -98,8 +98,8 @@ class Customer {
         Main.customers.add(newCustomer);
 
         // Save the changes to the customers file
-        Main.saveAndLoadData();
-
+        SaveAndLoad.saveCustomers();
+        SaveAndLoad.loadCustomers();
         System.out.println("New customer created successfully.");
         Menu.returnToMenu();
     }
