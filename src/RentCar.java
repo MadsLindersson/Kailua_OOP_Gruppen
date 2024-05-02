@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class RentCar {
     public static void rentCarFromMenu() {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Customers registered");
+        for (Customer customer : Main.customers) {
+            System.out.println(customer.getName() + " - " + customer.getEmail());
+        }
         System.out.println("Enter customer details:");
         System.out.print("Name: ");
         String name = scanner.nextLine();
@@ -49,9 +53,9 @@ public class RentCar {
         // Enter rental details
         System.out.print("Enter rental start date and time (DD-MM-YYYY): ");
         String fromDateAndTime = scanner.next();
-        System.out.println("Enter rental end date and time (DD-MM-YYYY): ");
+        System.out.print("Enter rental end date and time (DD-MM-YYYY): ");
         String toDateAndTime = scanner.next();
-        System.out.println("Enter maximum kilometers allowed: ");
+        System.out.print("Enter maximum kilometers allowed: ");
         int maxKm = scanner.nextInt();
 
         // Rent the car

@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class ReturnCar {
     public static void returnCarFromMenu() {
         Scanner scanner = new Scanner(System.in);
+        for (Rental rentals : Main.rentals) {
+            System.out.println("Registration Number: " + rentals.getRentersID());
+        }
         System.out.print("Enter registration number of the car you want to return: ");
         int regNumber = scanner.nextInt();
 
