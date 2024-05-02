@@ -45,6 +45,7 @@ public class Print {
             System.out.println();
 
         }
+        Menu.returnToMenu();
     }
 
 }

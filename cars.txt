@@ -1,2 +1,3 @@
 Honda, Civic, Benzin, 0, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
 Mercedes, Benz, Diesel, 1, 2019-09-05, 20000, true, 5, true, true, 280, true, 3500, 540
+Mustang, G, Petrol, 2, 1999/02, 70000, true, 2, false, false, 7000, false, 652, 200

@@ -1,4 +1,3 @@
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Menu {
@@ -21,9 +20,9 @@ public class Menu {
                     System.out.println("4. Create a car");
                     int innerChoice = scanner.nextInt();
                     if (innerChoice == 1) {
-                        Main.rentCarFromMenu();
+                        RentCar.rentCarFromMenu();
                     } else if (innerChoice == 2) {
-                        Main.returnCarFromMenu();
+                        ReturnCar.returnCarFromMenu();
                     } else if (innerChoice == 3) {
                         Print.printCars();
                     } else if (innerChoice == 4){
