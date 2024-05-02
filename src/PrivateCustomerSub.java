@@ -21,15 +21,15 @@ public class PrivateCustomerSub extends Customer {
     public String toString()    {
         StringBuilder niceString = new StringBuilder();
 
-        niceString.append("Customer list: " + "\n");
-        niceString.append("Name:          " + getName() + "\n");
-        niceString.append("Address:       " + getAddress() + "\n");
-        niceString.append("Postal code:   " + getPostNumber() + "\n");
-        niceString.append("City:          " + getCity() + "\n");
-        niceString.append("Mobile number: " + getMobilePhone() + "\n");
-        niceString.append("Email:         " + getEmail() + "\n");
-        niceString.append("Licensenumber: " + getLicenseNumber() + "\n");
-        niceString.append("Driver since:  " + getDriverSinceDate() + "\n");
+        niceString.append("Private customers: " + "\n");
+        niceString.append("Name:              " + getName() + "\n");
+        niceString.append("Address:           " + getAddress() + "\n");
+        niceString.append("Postal code:       " + getPostNumber() + "\n");
+        niceString.append("City:              " + getCity() + "\n");
+        niceString.append("Mobile number:     " + getMobilePhone() + "\n");
+        niceString.append("Email:             " + getEmail() + "\n");
+        niceString.append("Licensenumber:     " + getLicenseNumber() + "\n");
+        niceString.append("Driver since:      " + getDriverSinceDate() + "\n");
         niceString.append("--------------------------------------------" + "\n");
 
         return niceString.toString();

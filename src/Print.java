@@ -27,11 +27,9 @@ public class Print {
         for (Customer customer : Main.customers) {
             if (customer instanceof PrivateCustomerSub) {
                 System.out.println(customer);
-            } else if (customer instanceof CompanyCustomerSub) {
+            } if (customer instanceof CompanyCustomerSub) {
                 System.out.println(customer);
-            } /*else {
-                System.out.println(customer);
-            }*/
+            }
         }
     }
 

@@ -31,16 +31,46 @@ public class SaveAndLoad {
     }
 
    public static void loadCustomers() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(Main.CUSTOMERS_FILE))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Main.PRIVATECUSTOMERS_FILE))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
                 // Extract information from parts and create Customer objects
-                Main.customers.add(new Customer(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]));
+                Main.customers.add(new PrivateCustomerSub(
+                        parts[0].trim(), //Name
+                        parts[1].trim(), //Address
+                        parts[2].trim(), //Postal code
+                        parts[3].trim(), //City
+                        parts[4].trim(), //Mobile number
+                        parts[5].trim(), //Email
+                        Integer.parseInt(parts[6].trim()), //License number
+                        parts[7]));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+       try (BufferedReader reader = new BufferedReader(new FileReader(Main.COMPANYCUSTOMERS_FILE))) {
+           String line;
+           while ((line = reader.readLine()) != null) {
+               String[] parts = line.split(",");
+               // Extract information from parts and create Customer objects
+               Main.customers.add(new CompanyCustomerSub(
+                       parts[0].trim(), //Name
+                       parts[1].trim(), //Address
+                       parts[2].trim(), //Postal code
+                       parts[3].trim(), //City
+                       parts[4].trim(), //Mobile number
+                       parts[5].trim(), //Email
+                       parts[6].trim(), //Company name
+                       parts[7].trim(), //Company address
+                       Integer.parseInt(parts[8].trim()), //Company phone number
+                       Integer.parseInt(parts[9].trim()))); //CRN
+
+           }
+       } catch (IOException e) {
+           e.printStackTrace();
+       }
     }
 
     public static void loadRentals() {
@@ -57,9 +87,11 @@ public class SaveAndLoad {
                         , Integer.parseInt(parts[4].trim()) // CurrentKm
                         , Integer.parseInt(parts[5].trim()))); //registrationNumber
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     public static void saveCars() {
@@ -74,10 +106,22 @@ public class SaveAndLoad {
     }
 
     public static void saveCustomers() {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Main.CUSTOMERS_FILE))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(Main.PRIVATECUSTOMERS_FILE))) {
             for (Customer customer : Main.customers) {
-                writer.write(customer.toString());
-                writer.newLine();
+                if(customer instanceof PrivateCustomerSub) {
+                    writer.write(
+                            PrivateCustomerSub.getName(),
+                            PrivateCustomerSub.getAddress(),
+                            PrivateCustomerSub.getPostNumber(),
+                            PrivateCustomerSub.getCity());
+
+                    writer.newLine();
+                }if(customer instanceof CompanyCustomerSub) {
+                    BufferedWriter writer2 = new BufferedWriter(new FileWriter(Main.COMPANYCUSTOMERS_FILE));
+                    writer2.write(customer.toString());
+                    writer2.newLine();
+
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
