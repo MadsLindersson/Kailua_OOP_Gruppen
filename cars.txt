@@ -1,4 +1,2 @@
 Honda, Civic, Benzin, 0, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
-Honda, Civic, Benzin, 1, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
-Honda, Civic, Benzin, 2, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
-Honda, Civic, Benzin, 3, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
+Mercedes, Benz, Diesel, 1, 2019-09-05, 20000, true, 5, true, true, 280, true, 3500, 540

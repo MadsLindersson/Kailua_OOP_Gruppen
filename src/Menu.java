@@ -34,12 +34,15 @@ public class Menu {
                 case 2:
                     System.out.println("1. Create a customer");
                     System.out.println("2. Print customers");
+                    System.out.println("3. Remove a csutomer");
                     int innerChoice2 = scanner.nextInt();
                     if (innerChoice2 == 1) {
                         Customer.createCustomer();
                     } else if (innerChoice2 == 2) {
-                        Print.printCustomers();
-                    } else {
+                        Print.printPrivateCustomers();
+                    } else if (innerChoice2 ==3) {
+                        Customer.removeCustomer();
+                    }else {
                         returnToMenu();
                     }
                     break;
