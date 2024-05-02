@@ -24,7 +24,14 @@ public class Print {
 
     public static void printPrivateCustomers() { //instance of
         System.out.println("Customer list:");
-       // ((PrivateCustomerSub).Customer).returnString();
+        
+        for (Customer customer : Main.customers) {
+            if (customer instanceof PrivateCustomerSub) {
+                System.out.println(customer);
+            } else if (customer instanceof CompanyCustomerSub) {
+                
+            }
+        }
     }
 
     public static void printRentals() {

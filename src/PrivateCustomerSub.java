@@ -18,7 +18,7 @@ public class PrivateCustomerSub extends Customer {
 
     public void setDriverSinceDate(String driverSinceDate) {this.driverSinceDate = driverSinceDate;}
 
-    public String returnString()    {
+    public String toString()    {
         StringBuilder niceString = new StringBuilder();
 
         niceString.append("Name:          " + getName() + "\n");
