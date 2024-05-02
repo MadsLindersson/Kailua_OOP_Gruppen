@@ -22,15 +22,16 @@ public class Print {
         Menu.returnToMenu();
     }
 
-    public static void printPrivateCustomers() { //instance of
-        System.out.println("Customer list:");
-        
+    public static void printPrivateCustomers() {
+
         for (Customer customer : Main.customers) {
             if (customer instanceof PrivateCustomerSub) {
                 System.out.println(customer);
             } else if (customer instanceof CompanyCustomerSub) {
-                
-            }
+                System.out.println(customer);
+            } /*else {
+                System.out.println(customer);
+            }*/
         }
     }
 
