@@ -1,2 +1,2 @@
-Mercedes, Benz, Diesel, 0, 2019-09-05, 20000, true, 5, true, true, 280, true, 3500, 540
-Honda, Civic, Benzin, 1, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200
+GoijnCar, BenzinBillen56, Diesel, 0, 2019-09-05, 20000, true, 5, true, true, 280, true, 3500, 540
+Honda, HugoModel2, Benzin, 1, 1999-12-15, 25, true, 5, false, true, 200, false, 370, 200

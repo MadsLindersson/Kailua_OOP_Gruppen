@@ -19,6 +19,7 @@ public class Menu {
                     System.out.println("3. Show all cars");
                     System.out.println("4. Create a car");
                     System.out.println("5. Remove a car");
+                    System.out.println("6. Edit a car");
                     int innerChoice = scanner.nextInt();
                     if (innerChoice == 1) {
                         RentCar.rentCarFromMenu();
@@ -30,6 +31,8 @@ public class Menu {
                         CreateCar.createCar();
                     } else if (innerChoice == 5){
                         RemoveCar.removeCar();
+                    } else if (innerChoice == 6){
+                        EditCar.editCar();
                     } else {
                         returnToMenu();
                     }

@@ -10,7 +10,6 @@ public class RentCar {
         System.out.println("Enter customer details:");
         System.out.print("Name: ");
         String name = scanner.nextLine();
-        // You can add more customer details input here
 
         // Find the customer
         Customer customer = null;
