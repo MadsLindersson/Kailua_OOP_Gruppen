@@ -159,7 +159,7 @@ class Customer {
         Main.customers.remove(customerToRemove);
 
         // Save the changes to the customers file
-        Main.saveAndLoadData();
+        SaveAndLoad.saveCustomers();
 
         System.out.println("Customer removed successfully.");
         Menu.returnToMenu();

@@ -4,7 +4,7 @@ public class ReturnCar {
     public static void returnCarFromMenu() {
         Scanner scanner = new Scanner(System.in);
         for (Rental rentals : Main.rentals) {
-            System.out.println("Registration Number: " + rentals.getRentersID());
+            System.out.println(rentals.getRentersID() + "Registration number: " +  rentals.getRegistrationNumber());
         }
         System.out.print("Enter registration number of the car you want to return: ");
         int regNumber = scanner.nextInt();
@@ -26,7 +26,6 @@ public class ReturnCar {
         Main.rentals.remove(rentalToRemove);
         // Save the changes to the rentals file
         SaveAndLoad.saveRentals();
-        SaveAndLoad.loadRentals();
         System.out.println("Car returned successfully.");
         Menu.returnToMenu();
     }

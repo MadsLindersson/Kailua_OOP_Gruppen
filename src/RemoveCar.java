@@ -29,7 +29,6 @@ public class RemoveCar {
 
     // Save the changes to the customers file
     SaveAndLoad.saveCars();
-    SaveAndLoad.loadCars();
     System.out.println("Car removed successfully.");
     Menu.returnToMenu();
 }
