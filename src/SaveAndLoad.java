@@ -44,7 +44,7 @@ public class SaveAndLoad {
                         parts[4].trim(), //Mobile number
                         parts[5].trim(), //Email
                         Integer.parseInt(parts[6].trim()), //License number
-                        parts[7]));
+                        parts[7].trim()));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -107,19 +107,40 @@ public class SaveAndLoad {
 
     public static void saveCustomers() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(Main.PRIVATECUSTOMERS_FILE))) {
+            try (BufferedWriter writer2 = new BufferedWriter(new FileWriter(Main.COMPANYCUSTOMERS_FILE))) {
             for (Customer customer : Main.customers) {
                 if(customer instanceof PrivateCustomerSub) {
-                    writer.write(
-                            PrivateCustomerSub.getName(),
-                            PrivateCustomerSub.getAddress(),
-                            PrivateCustomerSub.getPostNumber(),
-                            PrivateCustomerSub.getCity());
+                    StringBuilder sb = new StringBuilder();
+                    sb.append(customer.getName() + ", ");
+                    sb.append(customer.getAddress() + ", ");
+                    sb.append(customer.getPostNumber() +  ", ");
+                    sb.append(customer.getCity() + ", ");
+                    sb.append(customer.getMobilePhone() + ", ");
+                    sb.append(customer.getEmail() + ", ");
+                    sb.append(((PrivateCustomerSub) customer).getLicenseNumber() + ", ");
+                    sb.append(((PrivateCustomerSub) customer).getDriverSinceDate() + ", ");
+
+                    writer.write(sb.toString());
 
                     writer.newLine();
-                }if(customer instanceof CompanyCustomerSub) {
-                    BufferedWriter writer2 = new BufferedWriter(new FileWriter(Main.COMPANYCUSTOMERS_FILE));
-                    writer2.write(customer.toString());
-                    writer2.newLine();
+
+                }if (customer instanceof CompanyCustomerSub) {
+                        StringBuilder sb = new StringBuilder();
+                        sb.append(customer.getName() + ", ");
+                        sb.append(customer.getAddress() + ", ");
+                        sb.append(customer.getPostNumber() + ", ");
+                        sb.append(customer.getCity() + ", ");
+                        sb.append(customer.getMobilePhone() + ", ");
+                        sb.append(customer.getEmail() + ", ");
+                        sb.append(((CompanyCustomerSub) customer).getCompanyName() + ", ");
+                        sb.append(((CompanyCustomerSub) customer).getCompanyAddress() + ", ");
+                        sb.append(((CompanyCustomerSub) customer).getCompanyPhoneNumber() + ", ");
+                        sb.append(((CompanyCustomerSub) customer).getCRN() + ", ");
+
+                        writer2.write(sb.toString());
+
+                        writer2.newLine();
+                    }
 
                 }
             }

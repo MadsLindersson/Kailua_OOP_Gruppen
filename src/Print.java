@@ -22,7 +22,7 @@ public class Print {
         Menu.returnToMenu();
     }
 
-    public static void printPrivateCustomers() {
+    public static void printCustomers() {
 
         for (Customer customer : Main.customers) {
             if (customer instanceof PrivateCustomerSub) {
@@ -31,6 +31,7 @@ public class Print {
                 System.out.println(customer);
             }
         }
+        Menu.returnToMenu();
     }
 
     public static void printRentals() {

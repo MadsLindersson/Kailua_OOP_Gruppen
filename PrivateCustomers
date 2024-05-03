@@ -1,33 +1,3 @@
-Private customers: 
-Name:              John Doe
-Address:           Main St
-Postal code:       12345
-City:              Springfield
-Mobile number:     555-123-4567
-Email:             johndoe@email.com
-Licensenumber:     12345678
-Driver since:       2010/05
---------------------------------------------
-
-Private customers: 
-Name:              Jane Smith
-Address:           Oak Ave
-Postal code:       54321
-City:              Smalltown
-Mobile number:     555-987-6543
-Email:             janesmith@email.com
-Licensenumber:     98765432
-Driver since:       2015/10
---------------------------------------------
-
-Private customers: 
-Name:              Bob Johnson
-Address:           Elm St
-Postal code:       67890
-City:              Bigcity
-Mobile number:     555-567-8901
-Email:             bobjohnson@email.com
-Licensenumber:     56789012
-Driver since:       2018/03
---------------------------------------------
-
+John Doe, 123 Main St, 12345, Springfield, 555-123-4567, johndoe@email.com, 123456789, 2010/05, 
+Jane Smith, 456 Oak Ave, 54321, Smalltown, 555-987-6543, janesmith@email.com, 987654321, 2015/10, 
+Bob Johnson, 789 Elm St, 67890, Bigcity, 555-567-8901, bobjohnson@email.com, 567890123, 2018/03, 

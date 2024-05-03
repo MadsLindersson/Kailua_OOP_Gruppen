@@ -75,31 +75,62 @@ class Customer {
 
     public static void createCustomer() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter customer details:");
-        System.out.print("Name: ");
-        String name = scanner.nextLine();
-        System.out.print("Address: ");
-        String address = scanner.nextLine();
-        System.out.print("Post number: ");
-        String postNumber = scanner.nextLine();
-        System.out.print("City: ");
-        String city = scanner.nextLine();
-        System.out.print("Mobile phone: ");
-        String mobilePhone = scanner.nextLine();
-        System.out.print("Phone: ");
-        String phone = scanner.nextLine();
-        System.out.print("Email: ");
-        String email = scanner.nextLine();
-
-        // Create a new customer object
-        Customer newCustomer = new Customer(name, address, postNumber, city, mobilePhone, email);
-
-        // Add the new customer to the list of customers
-        Main.customers.add(newCustomer);
+        System.out.println("1. Private customer");
+        System.out.println("2. Company customer");
+        int answer = scanner.nextInt();
+        scanner.nextLine();
+        if(answer == 1) {
+            System.out.println("Enter customer details:");
+            System.out.println("Name: ");
+            String name = scanner.nextLine();
+            System.out.println("Address: ");
+            String address = scanner.nextLine();
+            System.out.println("Post number: ");
+            String postNumber = scanner.nextLine();
+            System.out.println("City: ");
+            String city = scanner.nextLine();
+            System.out.println("Mobile phone: ");
+            String mobilePhone = scanner.nextLine();
+            System.out.println("Email: ");
+            String email = scanner.nextLine();
+            System.out.println("Licensenumber: ");
+            int licensenumber = scanner.nextInt();
+            System.out.println("Driver since date: ");
+            String driverSinceDate = scanner.next();
+            PrivateCustomerSub customer = new PrivateCustomerSub(name, address, postNumber,
+                    city,mobilePhone,email,licensenumber,driverSinceDate);
+            Main.customers.add(customer);
+        } if (answer == 2) {
+            System.out.println("Enter customer details:");
+            System.out.println("Name: ");
+            String name = scanner.nextLine();
+            System.out.println("Address: ");
+            String address = scanner.nextLine();
+            System.out.println("Post number: ");
+            String postNumber = scanner.nextLine();
+            System.out.println("City: ");
+            String city = scanner.nextLine();
+            System.out.println("Mobile phone: ");
+            String mobilePhone = scanner.nextLine();
+            System.out.println("Email: ");
+            String email = scanner.nextLine();
+            System.out.println("Company name: ");
+            String companyName = scanner.nextLine();
+            System.out.println("Company address: ");
+            String companyAddress = scanner.nextLine();
+            System.out.println("Company phone number: ");
+            int companyPhoneNumber = scanner.nextInt();
+            System.out.println("CRN: ");
+            int CRN = scanner.nextInt();
+            CompanyCustomerSub customer = new CompanyCustomerSub(name, address, postNumber,
+                    city,mobilePhone,email,companyName,companyAddress, companyPhoneNumber, CRN);
+            Main.customers.add(customer);
+        } if(answer != 1 && answer != 2)  {
+            System.out.println("Wrong input");
+        }
 
         // Save the changes to the customers file
         SaveAndLoad.saveCustomers();
-        SaveAndLoad.loadCustomers();
         System.out.println("New customer created successfully.");
         Menu.returnToMenu();
     }

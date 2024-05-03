@@ -45,7 +45,7 @@ public class Menu {
                     if (innerChoice2 == 1) {
                         Customer.createCustomer();
                     } else if (innerChoice2 == 2) {
-                        Print.printPrivateCustomers();
+                        Print.printCustomers();
                     } else if (innerChoice2 ==3) {
                         Customer.removeCustomer();
                     }else {
