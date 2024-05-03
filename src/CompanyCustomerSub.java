@@ -50,7 +50,7 @@ public class CompanyCustomerSub extends Customer {
     public String toString() {
         StringBuilder niceString = new StringBuilder();
 
-        niceString.append("Customer list:" + "\n");
+        niceString.append("Company Customers:" + "\n");
         niceString.append("Name:                 " + getName() + "\n");
         niceString.append("Address:              " + getAddress() + "\n");
         niceString.append("Postal code:          " + getPostNumber() + "\n");

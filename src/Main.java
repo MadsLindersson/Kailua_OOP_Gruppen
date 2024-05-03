@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static final String CARS_FILE = "cars.txt";
-    public static final String CUSTOMERS_FILE = "customers.txt";
+    public static final String PRIVATECUSTOMERS_FILE = "PrivateCustomers";
+    public static final String COMPANYCUSTOMERS_FILE = "CompanyCustomers";
     public static final String RENTALS_FILE = "rentals.txt";
 
     public static ArrayList<Car> cars = new ArrayList<>();
